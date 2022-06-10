@@ -1,0 +1,137 @@
+* {
+    font-family: 'Syncopate', sans-serif;
+    border-left: 20px;
+    border-right: 20px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Estilos de el scrollbar  */
+html::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+html::-webkit-scrollbar:vertical {
+    width:7px;
+}
+html::-webkit-scrollbar-button html::-webkit-scrollbar-button {
+    display: none;
+} 
+html::-webkit-scrollbar-corner{
+    display: none;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    border: none;
+}
+/* Estilos Generales */
+body {
+    background-image: url(../assets/images/beanstalk-dark.webp);
+    min-height: 100vh;
+    display: grid;
+    grid-auto-rows: auto 1fr auto;
+
+}
+nav h1 a{
+    text-decoration: none;
+    color: white;
+}
+nav h1 a:hover{
+    color: rgb(238, 228, 228);
+}
+.nav-flex{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+}
+nav div {
+    flex-basis: 90%;
+}
+nav span{
+    display:flex;
+    flex-basis: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav span a{
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 3px;
+}
+nav span a:hover{
+    color: black;
+    background-color: white;
+    transition: all .5s ease-in-out;
+}
+.carritoPart{
+    margin-top: 20px;
+}
+.carritoPart div h2 {
+    color: rgba(255, 255, 255, 0.918);
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.836);
+
+}
+
+picture img{
+    min-width: 100px;
+    max-width: 100px;
+    border-radius: 5px;
+    max-height: 150px;
+    min-height: 120px;
+}
+td{
+    font-size: larger;
+}
+th{
+    font-size: x-large;
+}
+.vaciarCarritoButton{
+    border: 1px solid white;
+    background-color: #b80606b6;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+.deleteButton{
+    border: 1px solid white;
+    background-color: #46494b;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+.deleteButton:hover{
+    background-color: #595c5e;
+    color: black;
+    transition: all .5s ease-in-out;
+}
+footer p{
+    color: white;
+    margin-bottom: 5px;
+}
+footer{
+    text-align: center;
+}
+
+
+/* Estilos de la libreria Sweet Alert */
+
+.swal2-confirm a{
+    text-decoration: none;
+    color: white;
+}
+.swal2-popup{
+    background-color:#595c5e;
+    color: white;
+}
+.swal2-styled.swal2-confirm{
+    background-color: #b80606b6;
+    border: #46494b;
+    box-shadow:  0 0 0 3px rgba(151, 148, 180, 0.5);
+}

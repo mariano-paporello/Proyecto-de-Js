@@ -1,0 +1,171 @@
+/* Normalize */
+* {
+    font-family: 'Syncopate', sans-serif;
+    border-left: 20px;
+    border-right: 20px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+/* Estilos de el scrollbar  */
+html::-webkit-scrollbar {
+    background-color: black;
+}
+
+html::-webkit-scrollbar:vertical {
+    width:7px;
+}
+html::-webkit-scrollbar-button html::-webkit-scrollbar-button {
+    display: none;
+} 
+html::-webkit-scrollbar-corner{
+    display: none;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(252, 252, 252);
+    border-radius: 2px;
+    border: none;
+}
+/* Estilo del titulo de la pagina */
+nav {
+    display: inline;
+    text-align: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    background-color: #101740;
+}
+nav h2{
+    color: #ffffff;
+}
+nav a{
+    color: black;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    padding: 4px;
+    text-align: center;
+}
+nav a div img{
+    min-width: 20px;
+    min-height: auto;
+}
+
+/* Estilos generales */
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-auto-rows: auto 1fr auto;
+
+}
+strong{
+    font-size:small;
+}
+p{
+    margin-bottom: 0px;
+}
+
+/* estilos de la Secion de los productos y el carrito */
+.productosYCarrito {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.productos {
+    text-align: center;
+    flex-basis: 50%;
+    background-color: #1B2040;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.productosTitle{
+    flex-grow: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.788);
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+.backGround{
+    background-image:url(../assets/images/oriental-tiles.png);
+    background-attachment:fixed;
+}
+
+.footerPart {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #101740;
+    color: white;
+}
+
+
+
+.productosLista{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:stretch;
+    width: 100%;
+    justify-content: center;
+}
+.polaroid_content {
+    text-align: center;
+    padding: 0vh 2vw;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    flex-direction:column;
+    font-weight:500;
+    margin-top: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.comics_polaroid {
+    background: rgba(255, 255, 255, 0.356);
+    border-radius: 10px;
+    border: 1px solid rgba(19, 18, 18, 0.425);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    min-width: 100px;
+    max-width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.comics_polaroid_picture {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    min-width: 100px;
+}
+.comics_polaroid_picture_cart{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    min-width: 100px;
+}
+
+button {
+    background-color: rgba(255, 249, 249, 0.692);
+    border: solid rgba(0, 0, 0, 0.589) 2px;
+    border-radius: 7px;
+    margin-bottom: 1px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    
+}
+button:hover{
+    background-color: #101740;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    color: white;
+} 
