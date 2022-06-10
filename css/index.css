@@ -33,22 +33,37 @@ html::-webkit-scrollbar-thumb {
 }
 /* Estilo del titulo de la pagina */
 nav {
-    display: inline;
-    text-align: center;
+    display: flex;
+    justify-content:flex-start;
     border-bottom: 1px solid rgb(0, 0, 0);
     padding: 10px;
-    background-color: #101740;
+    background-color: #000000b2;
 }
 nav h2{
     color: #ffffff;
+    flex-basis: 80%;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+nav span{
+    display: flex;
+    justify-content: center;
+    flex-basis: 20%;
+    
 }
 nav a{
+    text-align: center;
+    align-items: center;
     color: black;
     border: 2px solid white;
     background-color: white;
     border-radius: 10px;
     padding: 4px;
     text-align: center;
+}
+nav a:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.678);
 }
 nav a div img{
     min-width: 20px;
@@ -80,7 +95,7 @@ p{
 .productos {
     text-align: center;
     flex-basis: 50%;
-    background-color: #1B2040;
+    background-color: #0b0c0cb6;
     margin-top: 20px;
     padding: 0 20px;
 }
@@ -92,7 +107,7 @@ p{
 }
 
 .backGround{
-    background-image:url(../assets/images/oriental-tiles.png);
+    background-image:url(../assets/images/prism.png);
     background-attachment:fixed;
 }
 
@@ -101,7 +116,7 @@ p{
     flex-grow: 1;
     justify-content: center;
     margin-top: 20px;
-    background-color: #101740;
+    background-color: #0000009d;
     color: white;
 }
 
@@ -145,6 +160,7 @@ p{
     height: auto;
     border-radius: 10px;
     min-width: 100px;
+    max-height: 250px;
 }
 .comics_polaroid_picture_cart{
     width: 100%;

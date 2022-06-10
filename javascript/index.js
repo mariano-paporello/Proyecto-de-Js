@@ -1,5 +1,3 @@
-
-
 const stock = [producto1, producto2, producto3, producto4, producto5];
 let carrito = []
 
@@ -10,7 +8,7 @@ function displayInPage(arrayConProductos) {
         let divProducto = document.createElement("div");
         divProducto.classList = "comics_polaroid"
         divProducto.innerHTML = `
-            <picture>
+            <picture id="imgContainer">
                 <img class="comics_polaroid_picture" src="${element.imagen}" alt="${element.id}">
             </picture>
             <div class="polaroid_content">
@@ -27,6 +25,7 @@ function displayInPage(arrayConProductos) {
 }
 displayInPage(stock)
 
+
 let botonesDeAgrgadoAlCarrito = document.querySelectorAll("#alCarrito")
 
 botonesDeAgrgadoAlCarrito.forEach(element => {
@@ -40,12 +39,12 @@ botonesDeAgrgadoAlCarrito.forEach(element =>{
             duration: 1200,
             gravity: 'top',
             position: 'right',
-            destination: "http://127.0.0.1:5500/Proyecto%20Final%20Segunda%20entrega/carrito.html",
+            destination: "./carrito.html",
             stopOnFocus: true,
-            avatar: "https://icons.iconarchive.com/icons/crountch/one-piece-jolly-roger/48/Gouvernement-Mondiale-icon.png",
+            avatar: "./assets/images/1499955.png",
             style: {
-                background: "lightblue",
-                color: "black"
+                background: "black",
+                color: ""
               },
         }).showToast();
     
@@ -60,7 +59,6 @@ function alCarrito(evento) {
       }
       
       let index = carrito.findIndex(producto => producto.id  === evento.target.parentNode.parentNode.children[0].children[0].alt)
-      console.log(index)
 
     let id = evento.target.parentNode.parentNode.children[0].children[0].alt;
     let nombre = evento.target.parentNode.children[0].innerText;
@@ -72,7 +70,6 @@ function alCarrito(evento) {
       }
       else{
           carrito[index].cantidad++;
-          console.log(carrito[index].precio)
           carrito[index].subtotal = carrito[index].precio * carrito[index].cantidad;
       }
     
@@ -87,5 +84,5 @@ function carritoLink(array){
     for(let product of array){
         totalProductos += product.cantidad;
     }
-    textoCarrito.innerHTML = `<img src="./assets/images/basket.svg" alt="Carrito">${totalProductos}`
+    textoCarrito.innerHTML = `<p> Carrito </p> <img src="./assets/images/basket.svg" alt="Carrito">${totalProductos}`
 }

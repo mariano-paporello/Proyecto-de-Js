@@ -1,7 +1,7 @@
 let carrito = JSON.parse(localStorage.getItem("carrito"));
-
+let precioTotal = "0";
 let tableBody = document.querySelector("#tableBody")
-
+const subtotales = []
 function displayInCart(arrayDeCarrito) {
     for (let product of arrayDeCarrito) {
         let row = document.createElement("tr")
@@ -26,6 +26,7 @@ let deleteButtons = document.querySelectorAll(".deleteButton")
 
 deleteButtons.forEach(element => {
     element.addEventListener("click", eliminarProducto)
+    // element.addEventListener("click", calcularTotal)
 })
 
 function eliminarProducto(e) {
@@ -37,7 +38,7 @@ function eliminarProducto(e) {
         title: "Producto Eliminado",
         text: `${e.target.parentNode.parentNode.children[0].children[1].innerText} eliminado correctamente`,
         icon: "success",
-        confirmButtonText: "Perfecto!"
+        confirmButtonText: "Perfecto!",
     })
     
 }
@@ -50,3 +51,25 @@ function vaciarElCarrito(e) {
     e.target.parentNode.parentNode.parentNode.parentNode.children[1].remove();
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
+
+
+
+// Tengo que agarrar todos los precios , para que de esa forma poder sumarlos 
+// para eso primero voy a hacer un array que atrape todos los subtotales
+// despues voy a hacer un reduce a esos arrays
+// y asignarlos a Precio Total
+
+calcularTotal()
+function calcularTotal(){
+    carrito.forEach(element=>{
+        subtotales.push(Number(element.subtotal))
+        const initialValue = 0;
+         precioTotal = subtotales.reduce(
+        (previousValue, currentValue) => previousValue + currentValue,initialValue);
+        })
+    let tableFooter = document.querySelector("#tableFooter")
+    tableFooter.innerHTML = `<td></td><td></td><td></td><td></td><td> Total: ${precioTotal}</td>`
+}
+
+
+
