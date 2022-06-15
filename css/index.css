@@ -112,14 +112,36 @@ p{
     background-attachment:fixed;
 }
 
+footer{
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    gap: 10px;
+    display: flex;
+    background-color: #0000009d;
+    color: white;   
+    padding: 10px;
+}
+.contactUs{
+    padding: 0 30px ;
+}
+
 .footerPart {
     display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    margin-top: 20px;
-    background-color: #0000009d;
-    color: white;
+    text-align: center;
+    color: rgba(206, 206, 206, 0.733);
 }
+
+.contactButtons{
+        display: flex;
+        justify-content:flex-start;
+        padding: 0 30px;
+        align-items: center;
+        gap: 10px;
+    }
+.contactButtons a:hover{
+    border-bottom: 1px solid white;
+}
+
 
 
 
