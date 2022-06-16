@@ -68,7 +68,7 @@ function calcularTotal(){
         (previousValue, currentValue) => previousValue + currentValue,initialValue);
         })
     let tableFooter = document.querySelector("#tableFooter")
-    tableFooter.innerHTML = `<td></td><td></td><td></td><td></td><td> Total: ${precioTotal}</td>`
+    tableFooter.innerHTML = `<td></td><td></td><td></td><td></td><td> Total: $${precioTotal}</td>`
 }
 
 
