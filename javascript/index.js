@@ -2,7 +2,7 @@ let carrito = []
 
 cargarData()
 function cargarData(){
-    fetch("/javascript/data/productos.json")
+    fetch("./javascript/data/productos.json")
         .then((response)=>response.json())
         .then((json)=> displayInPage(json))
 }
