@@ -3,7 +3,7 @@ let carrito = []
 let divContainer = document.querySelector(".productosLista")
 cargarData()
 function cargarData(){
-    fetch("/data/productos.js")
+    fetch("/javascript/data/productos.js")
         .then((response)=>response.json())
         .then((json)=> displayInPage(json) )
 }
