@@ -1,6 +1,5 @@
 const stock = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9];
 let carrito = []
-
 let divContainer = document.querySelector(".productosLista")
 
 function displayInPage(arrayConProductos) {
@@ -32,18 +31,18 @@ function displayInPage(arrayConProductos) {
             let imagen = element.imagen
             const producto = new AlCarrito(id, nombre, precio, imagen)
             let index = carrito.findIndex(element=> element.id === producto.id)
-            console.log(index)
+            
             if(index === -1){
                 const producto = new AlCarrito(id, nombre, precio, imagen)
                 carrito.push(producto)
             }else{
                 carrito[index].cantidad++;
-                console.log(carrito[index].precio)
                 carrito[index].subtotal = carrito[index].precio * carrito[index].cantidad;
             }
             localStorage.setItem("carrito", JSON.stringify(carrito))
+            
             carritoLink(carrito)
-            console.log(carrito)
+            
         })
         // Parte para poder mostrar el tostify al tocar el boton
 
@@ -53,7 +52,7 @@ function displayInPage(arrayConProductos) {
                     duration: 1200,
                     gravity: 'top',
                     position: 'right',
-                    destination: "http://127.0.0.1:5500/Proyecto%20Final%20Segunda%20entrega/carrito.html",
+                    destination: "./carrito.html",
                     stopOnFocus: true,
                  avatar: "https://icons.iconarchive.com/icons/crountch/one-piece-jolly-roger/48/Gouvernement-Mondiale-icon.png",
                     style: {
@@ -65,26 +64,12 @@ function displayInPage(arrayConProductos) {
     
         })
     });
-
-    let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
-
-    if(carritoLocalStorage){
-        carritoLink(carritoLocalStorage)
-    }
-
 }
+
 displayInPage(stock)
-    // let getCarritoStorage = JSON.parse(localStorage.getItem("carrito"))
-
-    // if (getCarritoStorage) {
-    //     carrito = getCarritoStorage
-    // }
-
-
-    
-
+carritoLink(carrito)
 function carritoLink(array) {
-
+    console.log(carrito)
     let textoCarrito = document.querySelector("#carritoLink");
     let totalProductos = 0;
 

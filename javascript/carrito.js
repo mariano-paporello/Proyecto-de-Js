@@ -11,6 +11,7 @@ function displayInCart(arrayDeCarrito) {
 
 }
 displayInCart(carrito)
+calcularTotal()
 // operador ternario
 carrito.length == 0 && carritoVacio()
 
@@ -59,7 +60,7 @@ function vaciarElCarrito(e) {
 // despues voy a hacer un reduce a esos arrays
 // y asignarlos a Precio Total
 
-calcularTotal()
+
 function calcularTotal(){
     carrito.forEach(element=>{
         subtotales.push(Number(element.subtotal))
