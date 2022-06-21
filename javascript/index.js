@@ -1,12 +1,13 @@
-const stock = [];
+// const stock = [];
 let carrito = []
-let divContainer = document.querySelector(".productosLista")
+
 cargarData()
 function cargarData(){
-    fetch("/javascript/data/productos.js")
+    fetch("/javascript/data/productos.json")
         .then((response)=>response.json())
         .then((json)=> displayInPage(json) )
 }
+let divContainer = document.querySelector(".productosLista")
 
 
 function displayInPage(arrayConProductos) {
