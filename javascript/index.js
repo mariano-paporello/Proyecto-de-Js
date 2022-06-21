@@ -3,11 +3,9 @@ let carrito = []
 let divContainer = document.querySelector(".productosLista")
 cargarData()
 function cargarData(){
-    fetch("/javascript/data/productos.js")
+    fetch("./javascript/data/productos.js")
         .then((response)=>response.json())
         .then((json)=> displayInPage(json) )
-        // json.forEach(element=>{
-        //     stock.push(element)}
 }
 
 

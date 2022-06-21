@@ -1,12 +1,3 @@
-// class producto {
-//     constructor(id, nombre, precio, imagen, info) {
-//         this.id = id;
-//         this.nombre = nombre;
-//         this.precio = precio;
-//         this.imagen = imagen;
-//         this.info= info
-//     }
-// }
 class AlCarrito {
     constructor(id, nombre, precio, imagen, cantidad, subtotal) {
         this.id = id;
