@@ -1,10 +1,20 @@
-const stock = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9];
+const stock = [];
 let carrito = []
 let divContainer = document.querySelector(".productosLista")
+cargarData()
+function cargarData(){
+    fetch("/javascript/data/productos.js")
+        .then((response)=>response.json())
+        .then((json)=> displayInPage(json) )
+        // json.forEach(element=>{
+        //     stock.push(element)}
+}
+
 
 function displayInPage(arrayConProductos) {
     //Recorro el array para crear la base html de los productos y ademas los botones de cada uno
     arrayConProductos.forEach(element => {
+        console.log(element)
         let divProducto = document.createElement("div");
 
         divProducto.classList = "comics_polaroid"
@@ -66,10 +76,8 @@ function displayInPage(arrayConProductos) {
     });
 }
 
-displayInPage(stock)
 carritoLink(carrito)
 function carritoLink(array) {
-    console.log(carrito)
     let textoCarrito = document.querySelector("#carritoLink");
     let totalProductos = 0;
 
