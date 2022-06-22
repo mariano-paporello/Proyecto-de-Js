@@ -3,54 +3,63 @@
     "id": 1,
     "nombre": "Overlord Vol.1",
     "precio": 600,
-    "imagen": "./assets/images/overlord1.jfif"
+    "imagen": "./assets/images/overlord1.jfif",
+    "info" : "Las aventuras de momonga ahora conocido como Ainz Ooal Gown que fue transportado al mundo del juego Ygdrasill con su grandiosa guarida conocida como la gran tumba de Nazarick. Ainz actualmente en el cuerpo de un no muerto ha perdido algunas de sus emociones humanas y con los NPC de la tumba que ahora están vivos y le rinden homenaje como un ser supremo"
   },
   {
     "id": 2,
     "nombre": "Evangelion Vol.1",
     "precio": 550,
-    "imagen": "./assets/images/Evangelion1.jpg"
+    "imagen": "./assets/images/Evangelion1.jpg",
+    "info" :"Las aventuras de Shinji y Ray a bordo de los prototipo de Eva, dispuestos a enfrentarse a los malvados ángeles que quieren destruir el mundo."
   },
   {
     "id": 3,
     "nombre": "Spy X Family Vol.1",
     "precio": 700,
-    "imagen": "./assets/images/spyxfamily1.jpg"
+    "imagen": "./assets/images/spyxfamily1.jpg",
+    "info" :"Los países de Westalis y Ostania libran desde hace años una guerra fría donde el espionaje y los asesinatos son moneda corriente. El inigualable espía conocido como Twilight es el mejor agente de Westalis que tiene por objetivo encargarse del poderos"
   },
   {
     "id": 4,
     "nombre": "Baki Dou Vol.2",
     "precio": 500,
-    "imagen": "./assets/images/51nCKhn59sS.jpg"
+    "imagen": "./assets/images/51nCKhn59sS.jpg",
+    "info" :"La historia de Baki Hanma, un joven luchador que entrena intensamente para superar a su padre Yujiro Hanma que es uno de los luchadores más potentes del mundo. Pronto se ve obligado a poner a prueba su fuerza, ya que es retado por cinco presos del corredor de la muerte."
   },
   {
     "id": 5,
     "nombre": "Berserker Vol.1",
     "precio": 700,
-    "imagen": "./assets/images/berserker1.jpg"
+    "imagen": "./assets/images/berserker1.jpg",
+    "info" : "La historia de Guts , un antihéroe mercenario que vaga por el mundo en solitario en búsqueda de Apóstoles , unos seres demoníacos que antaño fueron humanos pero que sacrificaron una parte importante de sus vidas para conseguir poderes que les permitieran alcanzar sus más oscuros deseos."
   },
   {
     "id": 6,
     "nombre": "One Piece Vol.1",
     "precio": 860,
-    "imagen": "./assets/images/onepiece.jpg"
+    "imagen": "./assets/images/onepiece.jpg",
+    "info" :"Un joven llamado Monkey D. Luffy jura convertirse en el Rey de los Piratas, accidentalmente come la fruta Gomu Gomu, y su ídolo, Shanks, le da un sombrero de paja. Diez años después, Luffy se embarca en alta mar."
   },
   {
     "id": 7,
     "nombre": "Fire Force Vol.27",
     "precio": 780,
-    "imagen": "./assets/images/fireforce27.jpg"
+    "imagen": "./assets/images/fireforce27.jpg",
+    "info" :"La ciudad de Tokio está plagada de un fenómeno mortal: la Combustión Humana Espontánea . Afortunadamente, un equipo especial está allí para apagar el infierno: ¡The Fire Force ! Los Fire Soldiers en Special Fire Cathedral 8 están a punto de obtener una adición única. Entra Shinra ."
   },
   {
     "id": 8,
     "nombre": "Chainsaw Man Vol.9",
     "precio": 690,
-    "imagen": "./assets/images/chainsawman9.jpg"
+    "imagen": "./assets/images/chainsawman9.jpg",
+    "info" :"Cuando su padre murió, Denji se vio obligado a saldar una gran deuda y no había forma de pagarla. Pero gracias a la ayuda de un Demonio Perro que salvó llamado Pochita, Denji es capaz de sobrevivir convirtiéndose en un Cazador Demonio a sueldo haciendo trabajos para los Yakuza. "
   },
   {
     "id": 9,
     "nombre": "My Hero Academia Vol.33",
     "precio": 900,
-    "imagen": "assets/images/myhero33.jpg"
+    "imagen": "assets/images/myhero33.jpg",
+    "info" :"El estudiante de secundaria Izuku Midoriya quiere ser un héroe más que nada, pero no tiene una pizca de poder en él. Sin posibilidad de entrar en la prestigiosa Academia U.A., que es la secundaria mas prestigiosa en donde estudian los futuros héroes"
   }
 ]
