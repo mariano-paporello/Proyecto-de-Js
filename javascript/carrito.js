@@ -8,7 +8,6 @@ function displayInCart(arrayDeCarrito) {
         row.innerHTML = `<td><picture><img src="${product.imagen}" alt="${product.id}"></picture><p>${product.nombre}</p><div></td><td><p>$${product.precio}<p></td><td><p>${product.cantidad}</td><td><p>$${product.subtotal}</p></td><td><button id="${product.id}" class="deleteButton ">Eliminar</button></td></div>`
         tableBody.appendChild(row)
     }
-
 }
 calcularTotal(carrito)
 displayInCart(carrito)
@@ -53,6 +52,7 @@ function vaciarElCarrito(e) {
     carrito.splice(0)
     e.target.parentNode.parentNode.parentNode.parentNode.children[1].remove();
     localStorage.setItem("carrito", JSON.stringify(carrito))
+    calcularTotal(carrito)
 }
 
 
