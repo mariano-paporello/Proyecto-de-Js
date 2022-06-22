@@ -52,6 +52,7 @@ function vaciarElCarrito(e) {
     carrito.splice(0)
     e.target.parentNode.parentNode.parentNode.parentNode.children[1].remove();
     localStorage.setItem("carrito", JSON.stringify(carrito))
+    console.log(carrito)
     calcularTotal(carrito)
 }
 
