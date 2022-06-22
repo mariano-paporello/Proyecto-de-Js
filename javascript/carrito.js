@@ -71,6 +71,7 @@ function calcularTotal(array){
         precioTotal = subtotales.reduce(
         (previousValue, currentValue) => previousValue + currentValue,0);
         })
+        console.log(subtotales)
         subtotales = []
         if(carrito.length === 0){
             precioTotal = 0
