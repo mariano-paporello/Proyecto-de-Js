@@ -1,5 +1,5 @@
 let carrito = JSON.parse(localStorage.getItem("carrito"));
-let precioTotal = "0";
+let precioTotal = 0;
 let tableBody = document.querySelector("#tableBody")
 const subtotales = []
 function displayInCart(arrayDeCarrito) {
@@ -10,8 +10,9 @@ function displayInCart(arrayDeCarrito) {
     }
 
 }
+calcularTotal(carrito)
 displayInCart(carrito)
-calcularTotal()
+
 // operador ternario
 carrito.length == 0 && carritoVacio()
 
@@ -27,11 +28,12 @@ let deleteButtons = document.querySelectorAll(".deleteButton")
 
 deleteButtons.forEach(element => {
     element.addEventListener("click", eliminarProducto)
-    // element.addEventListener("click", calcularTotal)
 })
 
 function eliminarProducto(e) {
-    let index = carrito.findIndex(product => product.id === e.target.id)
+    let index = carrito.findIndex(p => p.id === Number(e.target.id))
+    console.log(index)
+    console.log(e.target.id)
     carrito.splice(index, 1)
     e.target.parentNode.parentNode.remove();
     localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -41,9 +43,8 @@ function eliminarProducto(e) {
         icon: "success",
         confirmButtonText: "Perfecto!",
     })
-    
+    console.log("Carrito: ", carrito)   
 }
-
 let vaciarButton = document.querySelector(".vaciarCarritoButton")
 vaciarButton.addEventListener("click", vaciarElCarrito)
 
@@ -55,22 +56,25 @@ function vaciarElCarrito(e) {
 
 
 
+
 // Tengo que agarrar todos los precios , para que de esa forma poder sumarlos 
 // para eso primero voy a hacer un array que atrape todos los subtotales
 // despues voy a hacer un reduce a esos arrays
 // y asignarlos a Precio Total
 
 
-function calcularTotal(){
-    carrito.forEach(element=>{
-        subtotales.push(Number(element.subtotal))
-        const initialValue = 0;
+function calcularTotal(array){
+    precioTotal = 0
+    array.forEach(element=>{
+        subtotales.push(element.subtotal)
          precioTotal = subtotales.reduce(
-        (previousValue, currentValue) => previousValue + currentValue,initialValue);
+        (previousValue, currentValue) => previousValue + currentValue,0);
         })
     let tableFooter = document.querySelector("#tableFooter")
     tableFooter.innerHTML = `<td></td><td></td><td></td><td></td><td> Total: $${precioTotal}</td>`
 }
+
+
 
 
 

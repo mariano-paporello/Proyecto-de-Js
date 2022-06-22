@@ -26,13 +26,21 @@ function displayInPage(arrayConProductos) {
                <p> $${element.precio}</p>
             </div>`;
         divContainer.appendChild(divProducto);
-
+        let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
+            if(carritoLocalStorage){
+                carritoLink(carritoLocalStorage)
+        }
         let button = document.createElement("button")
         button.innerHTML = "Comprar"
-
+        
         divProducto.appendChild(button)
         // Parte del boton que permite añadir productos a el carrito
         button.addEventListener("click", ()=>{
+            let getCarritoStorage = JSON.parse(localStorage.getItem("carrito"))
+    
+            if(getCarritoStorage){
+                carrito = getCarritoStorage
+            }
             let id = element.id
             let nombre= element.nombre
             let precio = element.precio
@@ -48,7 +56,6 @@ function displayInPage(arrayConProductos) {
                 carrito[index].subtotal = carrito[index].precio * carrito[index].cantidad;
             }
             localStorage.setItem("carrito", JSON.stringify(carrito))
-            
             carritoLink(carrito)
             
         })
