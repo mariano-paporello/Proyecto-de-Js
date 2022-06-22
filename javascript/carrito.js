@@ -1,7 +1,7 @@
 let carrito = JSON.parse(localStorage.getItem("carrito"));
 let precioTotal = 0;
 let tableBody = document.querySelector("#tableBody")
-const subtotales = []
+let subtotales = []
 function displayInCart(arrayDeCarrito) {
     for (let product of arrayDeCarrito) {
         let row = document.createElement("tr")
@@ -43,6 +43,7 @@ function eliminarProducto(e) {
         icon: "success",
         confirmButtonText: "Perfecto!",
     })
+    calcularTotal(carrito)
     console.log("Carrito: ", carrito)   
 }
 let vaciarButton = document.querySelector(".vaciarCarritoButton")
@@ -64,12 +65,16 @@ function vaciarElCarrito(e) {
 
 
 function calcularTotal(array){
-    precioTotal = 0
+    
     array.forEach(element=>{
         subtotales.push(element.subtotal)
-         precioTotal = subtotales.reduce(
+        precioTotal = subtotales.reduce(
         (previousValue, currentValue) => previousValue + currentValue,0);
         })
+        subtotales = []
+        if(carrito.length === 0){
+            precioTotal = 0
+        }
     let tableFooter = document.querySelector("#tableFooter")
     tableFooter.innerHTML = `<td></td><td></td><td></td><td></td><td> Total: $${precioTotal}</td>`
 }

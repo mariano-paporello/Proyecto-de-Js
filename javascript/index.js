@@ -12,7 +12,6 @@ let divContainer = document.querySelector(".productosLista")
 function displayInPage(arrayConProductos) {
     //Recorro el array para crear la base html de los productos y ademas los botones de cada uno
     arrayConProductos.forEach(element => {
-        console.log(element)
         let divProducto = document.createElement("div");
 
         divProducto.classList = "comics_polaroid"
