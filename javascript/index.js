@@ -40,10 +40,13 @@ function displayInPage(arrayConProductos) {
            `
            let imageHtml = pictureHtml.querySelector("img")
            imageHtml.classList= "imageWhenEventActive comics_polaroid_picture"
-           pictureHtml.addEventListener("click", () =>{
-            culo = true
+           let divMoreInfo = pictureHtml.querySelector(".fondoTransparente")
+           divMoreInfo.addEventListener("click", () =>{
+               divMoreInfo.innerHTML = null ;
+               imageHtml.classList = "comics_polaroid_picture"
            })
         })
+        
 
         let button = document.createElement("button")
         button.innerHTML = "Comprar"
