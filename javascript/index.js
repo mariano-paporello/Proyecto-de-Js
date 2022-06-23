@@ -17,7 +17,7 @@ function displayInPage(arrayConProductos) {
         divProducto.classList = "comics_polaroid"
 
         divProducto.innerHTML = `
-            <picture>
+            <picture class="infoWindow">
                 <img class="comics_polaroid_picture" src="${element.imagen}" alt="${element.id}">
             </picture>
             <div class="polaroid_content">
@@ -25,13 +25,28 @@ function displayInPage(arrayConProductos) {
                <p> $${element.precio}</p>
             </div>`;
         divContainer.appendChild(divProducto);
+        
         let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
             if(carritoLocalStorage){
                 carritoLink(carritoLocalStorage)
-        }
+        } 
+// se muestre el div que tengo en el addevent , adentro del infowindow y despues para que vuelva a la normalidad 
+// al fondotransaprente un addevent lisener
+        let pictureHtml = divProducto.querySelector("picture")
+        let imageHtml = pictureHtml.querySelector("img")
+        imageHtml.addEventListener("click", ()=>{
+           pictureHtml.innerHTML =  `<img class="comics_polaroid_picture" src="${element.imagen}" alt="${element.id}">
+           <div class="fondoTransparente"><p id="moreInfoActive">${element.info}</p></div>
+           `
+           let imageHtml = pictureHtml.querySelector("img")
+           imageHtml.classList= "imageWhenEventActive comics_polaroid_picture"
+           pictureHtml.addEventListener("click", () =>{
+            culo = true
+           })
+        })
+
         let button = document.createElement("button")
         button.innerHTML = "Comprar"
-        
         divProducto.appendChild(button)
         // Parte del boton que permite añadir productos a el carrito
         button.addEventListener("click", ()=>{
@@ -77,6 +92,9 @@ function displayInPage(arrayConProductos) {
             }).showToast();
     
         })
+        
+        
+
     });
 }
 
