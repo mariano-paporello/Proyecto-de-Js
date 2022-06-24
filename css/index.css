@@ -129,6 +129,16 @@ footer{
     display: inline;
     color: rgba(206, 206, 206, 0.733);
 }
+.footerOtherwaysLink a{
+    color: rgba(206, 206, 206, 0.733);
+    text-decoration: none;
+}
+.footerOtherwaysLink a:hover{
+    color: rgba(150, 150, 150, 0.733);
+}
+.footerOtherwaysLink a:visited{
+    color: rgba(212, 209, 209, 0.733);
+}
 .footerPart {
     display: flex;
     text-align: center;
