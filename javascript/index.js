@@ -33,7 +33,7 @@ function displayInPage(arrayConProductos) {
 // se muestre el div que tengo en el addevent , adentro del infowindow y despues para que vuelva a la normalidad 
 // al fondotransaprente un addevent lisener
         let pictureHtml = divProducto.querySelector("picture")
-        let imageHtml = pictureHtml.querySelector("img")
+        let imageHtml = pictureHtml.querySelector(".comics_polaroid_picture")
         imageHtml.addEventListener("click", ()=>{
            pictureHtml.innerHTML =  `<img class="comics_polaroid_picture" src="${element.imagen}" alt="${element.id}">
            <div class="fondoTransparente"><p id="moreInfoActive">${element.info}</p></div>
@@ -42,7 +42,7 @@ function displayInPage(arrayConProductos) {
            imageHtml.classList= "imageWhenEventActive comics_polaroid_picture"
            let divMoreInfo = pictureHtml.querySelector(".fondoTransparente")
            divMoreInfo.addEventListener("click", () =>{
-               divMoreInfo.innerHTML = null ;
+               divMoreInfo.innerHTML = "";
                imageHtml.classList = "comics_polaroid_picture"
            })
         })

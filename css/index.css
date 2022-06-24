@@ -125,6 +125,10 @@ footer{
     padding: 0 30px ;
 }
 
+.footerOtherways{
+    display: inline;
+    color: rgba(206, 206, 206, 0.733);
+}
 .footerPart {
     display: flex;
     text-align: center;
