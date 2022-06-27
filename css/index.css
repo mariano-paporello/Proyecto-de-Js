@@ -172,7 +172,20 @@ footer{
     background-image: none;
     position: absolute;
     top: 7%;
-    
+    animation: fadeIn 1s;
+}
+.fadeOut{
+    animation: fadeOut 1s;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity:1;
+    }
 }
 img{
     cursor: pointer;
@@ -212,6 +225,7 @@ img{
     max-width: 200px;
     margin-top: 20px;
     margin-bottom: 20px;
+    animation: fadeIn 1s;
 }
 
 .comics_polaroid_picture {
@@ -220,6 +234,7 @@ img{
     min-width: 100px;
     max-height: 250px;
     min-height: 150px;
+    
 }
 .comics_polaroid_picture_cart{
     width: 100%;
