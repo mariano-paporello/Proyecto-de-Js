@@ -30,9 +30,8 @@ function displayInPage(arrayConProductos) {
             if(carritoLocalStorage){
                 carritoLink(carritoLocalStorage)
         } 
-// se muestre el div que tengo en el addevent , adentro del infowindow y despues para que vuelva a la normalidad 
-// al fondotransaprente un addevent lisener
-        
+
+        // parte que permite mostrar mas información de cada producto
         let pictureHtml = divProducto.querySelector("picture")
         let imageHtml = pictureHtml.querySelector(".comics_polaroid_picture")
         mostrarFrente(element, pictureHtml, imageHtml)

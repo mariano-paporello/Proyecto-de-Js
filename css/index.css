@@ -1,6 +1,5 @@
 /* Normalize */
 * {
-    font-family: 'Syncopate', sans-serif;
     border-left: 20px;
     border-right: 20px;
     margin: 0;
@@ -8,6 +7,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 a{
     text-decoration: none;
@@ -114,20 +114,23 @@ p{
 
 footer{
     display: grid;
-    grid-template-columns: auto auto auto; 
+    grid-template-columns: 1fr 1fr 1fr; 
     gap: 10px;
-    display: flex;
     background-color: #0000009d;
     color: white;   
     padding: 10px;
 }
 .contactUs{
-    padding: 0 30px ;
+    padding: 0 1vw ;
 }
 
 .footerOtherways{
     display: inline;
     color: rgba(206, 206, 206, 0.733);
+}
+.footerOtherways a{
+    color: rgba(206, 206, 206, 0.733);
+    text-decoration: none;
 }
 .footerOtherwaysLink a{
     color: rgba(206, 206, 206, 0.733);
@@ -141,14 +144,16 @@ footer{
 }
 .footerPart {
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: rgba(206, 206, 206, 0.733);
 }
 
 .contactButtons{
         display: flex;
-        justify-content:flex-start;
-        padding: 0 30px;
+        justify-content:center;
+        padding: 0 1vw;
         align-items: center;
         gap: 10px;
     }
@@ -165,7 +170,7 @@ footer{
     position: relative;
     justify-content: center;
     align-items: center;
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
     font-size: small;
     font-weight: 600;
@@ -260,3 +265,9 @@ button:hover{
     transition: all 0.5s ease-in-out;
     color: white;
 } 
+button:active{
+    color: white;
+    background-color: black;
+    transition: all 0s ease-in-out;
+    padding: 3px;
+}
