@@ -1,5 +1,6 @@
 let carrito = []
 
+
 cargarData()
 function cargarData(){
     fetch("./javascript/data/productos.json")
@@ -104,6 +105,7 @@ function mostrarFrente (element, pictureHtml, imageHtml){
         })
      })
 }
+
 function carritoLink(array) {
     let textoCarrito = document.querySelector("#carritoLink");
     let totalProductos = 0;
